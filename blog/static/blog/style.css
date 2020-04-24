@@ -4,6 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -414,6 +415,8 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #6c757d; }
+
+
 
 code {
   font-size: 87.5%;
@@ -8193,7 +8196,7 @@ h1, h2, h3, h4, h5,
   left: 0;
   right: 0;
   overflow-y: hidden;
-  z-index: 1001;
+  /* z-index: 1001; */
   background: #fff;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -8201,7 +8204,7 @@ h1, h2, h3, h4, h5,
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
   border-right: 1px solid #e6e6e6; }
-  @media (min-width: 992px) {
+  /* @media (min-width: 992px) {
     #colorlib-aside {
       width: 25%; } }
   @media (max-width: 991.98px) {
@@ -8213,7 +8216,7 @@ h1, h2, h3, h4, h5,
       -o-transform: translateX(-320px);
       transform: translateX(-320px);
       padding-top: 2em;
-      background: rgba(0, 0, 0, 0.04); } }
+      background: rgba(0, 0, 0, 0.04); } } */
   #colorlib-aside #colorlib-logo {
     display: block;
     width: 100%;

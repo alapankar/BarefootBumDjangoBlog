@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css'%}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/style.css' %}">
   <link rel="stylesheet" href="{% static 'blog/open-iconic-bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'blog/animate.css' %}">
 
@@ -28,7 +30,6 @@
 
   <link rel="stylesheet" href="{% static 'blog/flaticon.css' %}">
   <link rel="stylesheet" href="{% static 'blog/icomoon.css' %}">
-  <link rel="stylesheet" href="{% static 'blog/style.css' %}">
 
 
   {% if title %}
@@ -40,19 +41,19 @@
 <body>
 
   <header class="site-header">
-    <nav class="navbar navbar-dark bg-steel fixed-top">
+    <nav class="navbar navbar-dark fixed-top" style="background-color:#228B22">
       <div class="container">
         <a class="navbar-brand mr-4" href="/">BarefootBum Blog</a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button> -->
-        <!-- <div class="collapse navbar-collapse" id="navbarToggle">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
         <div class="navbar-nav mr-auto">
         <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
         <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-      </div> -->
+      </div>
       <!-- Navbar Right Side -->
-      <!-- <div class="navbar-nav">
+       <div class="navbar-nav">
       {% if user.is_authenticated %}
       <a class="nav-item nav-link" href="{% url 'post-create' %}">Write Post</a>
       <a class="nav-item nav-link" href="{% url 'blog-profile' %}">Profile</a>
@@ -62,25 +63,19 @@
       <a class="nav-item nav-link" href="{% url 'blog-register' %}">Register</a>
       {% endif %}
     </div>
-  </div>-->
+  </div>
 </div>
 </nav>
-<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-<aside id="colorlib-aside" role="complementary" class="js-fullheight">
-  <nav id="colorlib-main-menu" role="navigation">
-    <ul>
-      <li class="colorlib-active"><a href="{% url 'blog-home' %}">Home</a></li>
-      <li><a href="{% url 'blog-about' %}">About</a></li>
-      {% if user.is_authenticated %}
-      <li><a href="{% url 'post-create' %}">Write Post</a></li>
-      <li><a href="{% url 'blog-profile' %}">Profile</a></li>
-      <li><a href="{% url 'blog-logout' %}">Logout</a></li>
-      {% else %}
-      <li><a href="{% url 'blog-login' %}">Login</a></li>
-      <li><a href="{% url 'blog-register' %}">Register</a></li>
-      {% endif %}
-    </ul>
-  </nav>
+<!-- <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>-->
+ <aside id="colorlib-aside" role="complementary" >
+   <h3 class="sidebar-heading">Categories</h3>
+   <ul class="categories">
+     <li><a href="#">Fashion </a></li>
+     <li><a href="#">Technology </a></li>
+     <li><a href="#">Travel </a></li>
+     <li><a href="#">Food </a></li>
+     <li><a href="#">Photography </a></li>
+   </ul>
 </aside>
 </header>
 
@@ -119,14 +114,19 @@
                   </form>
                 </div>
                 <div class="content-section">
-                  <h3 class="sidebar-heading">Categories</h3>
-                  <ul class="categories">
-                    <li><a href="#">Fashion </a></li>
-                    <li><a href="#">Technology </a></li>
-                    <li><a href="#">Travel </a></li>
-                    <li><a href="#">Food </a></li>
-                    <li><a href="#">Photography </a></li>
-                  </ul>
+                  <div class="colorlib-footer">
+                    <img src={% static 'blog/logo_size.jpg' %} style="padding-left:20%">
+                    <div class="mb-4">
+                      <h3>Subscribe for newsletter</h3>
+                      <form action="#" class="colorlib-subscribe-form">
+                        <div class="form-group d-flex">
+                          <div class="icon"><span class="icon-paper-plane"></span></div>
+                          <input type="text" class="form-control" placeholder="Enter Email Address">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -136,6 +136,8 @@
     </section>
   </div>
 </div>
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
